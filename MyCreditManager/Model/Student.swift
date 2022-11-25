@@ -41,10 +41,11 @@ class Student {
                 return
             }
         }
-        throw MyCreditManagerError.noSubject
+        let newSubject = Subject(name: subjectName, score: score)
+        subjects.append(newSubject)
     }
     
-    func getGrade() -> Double{
+    func getGrade() -> Double {
         var totalScore = 0.0
         for subject in subjects {
             totalScore += subject.getScore().rawValue

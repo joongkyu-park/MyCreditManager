@@ -14,7 +14,15 @@ class OutputView {
     }
     
     func printForInvalidInput() {
-        print("잘못된 입력입니다. 1~5 사이의 숫자 혹은 X를 입력해주세요.")
+        print("잘못된 입력입니다.\n")
+    }
+    
+    func printUnknownError() {
+        print("알 수 없는 오류입니다.\n")
+    }
+    
+    func printErrorDescription(description: String) {
+        print(description)
     }
     
     //MARK: - 학생 추가
@@ -23,20 +31,15 @@ class OutputView {
     }
     
     func printForCompletionAddingStudent(studentName: String) {
-        print("\(studentName) 학생을 추가했습니다.")
-    }
-    
-    func printForDuplicatedStudent(studentName: String) {
-        print("\(studentName)은 이미 존재하는 학생입니다. 추가하지 않습니다.")
+        print("\(studentName) 학생을 추가했습니다.\n")
     }
     
     //MARK: - 학생 삭제
     func printForDeletingStudent() {
         print("삭제할 학생의 이름을 입력해주세요.")
     }
-    
-    func printForNonexistentStudent(studentName: String) {
-        print("\(studentName) 학생을 찾지 못했습니다.")
+    func printForCompletionDeletingStudent(studentName: String) {
+        print("\(studentName) 학생을 삭제했습니다.\n")
     }
     
     //MARK: - 성적 추가
@@ -45,7 +48,7 @@ class OutputView {
     }
     
     func printForCompletionAddingSubject(studentName: String, subjectName: String, scoreString: String) {
-        print("\(studentName) 학생의 \(subjectName) 과목이 \(scoreString)로 추가(변경)되었습니다.")
+        print("\(studentName) 학생의 \(subjectName) 과목이 \(scoreString)로 추가(변경)되었습니다.\n")
     }
     
     //MARK: - 성적 삭제
@@ -54,7 +57,7 @@ class OutputView {
     }
     
     func printForCompletionDeletingSubject(studentName: String, subjectName: String) {
-        print("\(studentName) 학생의 \(subjectName) 과목의 성적이 삭제되었습니다.")
+        print("\(studentName) 학생의 \(subjectName) 과목의 성적이 삭제되었습니다.\n")
     }
     
     //MARK: - 평점보기
@@ -65,9 +68,10 @@ class OutputView {
     func printGrade(studentName: String, subjectScoreList: [(String, String)], grade: Double) {
         print(studentName)
         for subjectScore in subjectScoreList {
-            print("\(subjectScore.0): \(subjectScore.1)\n")
+            print("\(subjectScore.0): \(subjectScore.1)")
         }
-        print("평점: \(grade)")
+        let gradeTruncated = String(format: "%.2f", grade)
+        print("평점: \(gradeTruncated)\n")
     }
     
     //MARK: - 종료

@@ -7,5 +7,5 @@
 
 import Foundation
 
-print("Hello, World!")
-
+private let controller = Controller()
+controller.startApplication()

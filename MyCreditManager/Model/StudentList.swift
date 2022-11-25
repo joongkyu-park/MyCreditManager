@@ -10,7 +10,12 @@ import Foundation
 class StudentList {
     private var students: [Student] = []
     
-    func addStudent(studentName: String) {
+    func addStudent(studentName: String) throws {
+        for student in students {
+            if student.getName() == studentName {
+                throw MyCreditManagerError.duplicatedStudent
+            }
+        }
         let student = Student(name: studentName)
         students.append(student)
     }
@@ -45,11 +50,25 @@ class StudentList {
         throw MyCreditManagerError.noStudent
     }
     
-    func updataSubject(studentName: String, subjectName: String, score: Score) throws {
+    func updateSubject(studentName: String, subjectName: String, score: Score) throws {
         for student in students {
             if student.getName() == studentName {
                 try student.updateSubject(subjectName: subjectName, score: score)
                 return
+            }
+        }
+        throw MyCreditManagerError.noStudent
+    }
+    
+    func getGrade(studentName: String) throws -> (Double, [Subject]) {
+        for student in students {
+            if student.getName() == studentName {
+                if student.getAllSubjects().isEmpty {
+                    throw MyCreditManagerError.hasNotAnySubjects
+                }
+                let grade = student.getGrade()
+                let subjects = student.getAllSubjects()
+                return (grade, subjects)
             }
         }
         throw MyCreditManagerError.noStudent
