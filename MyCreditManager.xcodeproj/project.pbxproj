@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		188F9C282930EA0A00A8F8A3 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188F9C272930EA0A00A8F8A3 /* Student.swift */; };
+		188F9C2B2930EA1700A8F8A3 /* Subject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188F9C2A2930EA1700A8F8A3 /* Subject.swift */; };
+		188F9C2D2930EA3100A8F8A3 /* StudentList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188F9C2C2930EA3100A8F8A3 /* StudentList.swift */; };
+		188F9C2F2930EAC100A8F8A3 /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188F9C2E2930EAC100A8F8A3 /* Score.swift */; };
+		188F9C362930F66600A8F8A3 /* MyCreditManagerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188F9C352930F66600A8F8A3 /* MyCreditManagerError.swift */; };
 		18CFF01B292F6BA00003CD91 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CFF01A292F6BA00003CD91 /* main.swift */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +28,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		188F9C272930EA0A00A8F8A3 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
+		188F9C2A2930EA1700A8F8A3 /* Subject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subject.swift; sourceTree = "<group>"; };
+		188F9C2C2930EA3100A8F8A3 /* StudentList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentList.swift; sourceTree = "<group>"; };
+		188F9C2E2930EAC100A8F8A3 /* Score.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
+		188F9C352930F66600A8F8A3 /* MyCreditManagerError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCreditManagerError.swift; sourceTree = "<group>"; };
 		18CFF017292F6BA00003CD91 /* MyCreditManager */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MyCreditManager; sourceTree = BUILT_PRODUCTS_DIR; };
 		18CFF01A292F6BA00003CD91 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -38,6 +48,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		188F9C292930EA0C00A8F8A3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				188F9C272930EA0A00A8F8A3 /* Student.swift */,
+				188F9C2A2930EA1700A8F8A3 /* Subject.swift */,
+				188F9C2C2930EA3100A8F8A3 /* StudentList.swift */,
+				188F9C2E2930EAC100A8F8A3 /* Score.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		188F9C322930F62700A8F8A3 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				188F9C352930F66600A8F8A3 /* MyCreditManagerError.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		18CFF00E292F6BA00003CD91 = {
 			isa = PBXGroup;
 			children = (
@@ -57,6 +86,8 @@
 		18CFF019292F6BA00003CD91 /* MyCreditManager */ = {
 			isa = PBXGroup;
 			children = (
+				188F9C322930F62700A8F8A3 /* Common */,
+				188F9C292930EA0C00A8F8A3 /* Model */,
 				18CFF01A292F6BA00003CD91 /* main.swift */,
 			);
 			path = MyCreditManager;
@@ -121,6 +152,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				18CFF01B292F6BA00003CD91 /* main.swift in Sources */,
+				188F9C2B2930EA1700A8F8A3 /* Subject.swift in Sources */,
+				188F9C282930EA0A00A8F8A3 /* Student.swift in Sources */,
+				188F9C2D2930EA3100A8F8A3 /* StudentList.swift in Sources */,
+				188F9C362930F66600A8F8A3 /* MyCreditManagerError.swift in Sources */,
+				188F9C2F2930EAC100A8F8A3 /* Score.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,7 +213,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -231,7 +267,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
@@ -244,6 +280,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -253,6 +290,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
